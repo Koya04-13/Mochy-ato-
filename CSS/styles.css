@@ -1,0 +1,272 @@
+:root {
+  --night: #0a0d2b;
+  --violet: #5a3fd0;
+  --pink: #ffb7de;
+  --rose: #ff6fae;
+  --ink: #f6f2ff;
+  --lilac: #c9b8ff;
+  --card: rgba(34, 28, 98, 0.75);
+  --line: rgba(201, 184, 255, 0.28);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  background: var(--night);
+  color: var(--ink);
+  font-family: 'Nunito', sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.sky {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(2px 2px at 20% 20%, white, transparent),
+    radial-gradient(2px 2px at 70% 40%, #ffc6e6, transparent),
+    radial-gradient(2px 2px at 40% 80%, white, transparent),
+    linear-gradient(180deg, #0a0d2b, #14175a, #2b1f7c);
+  background-size: 180px 180px, 230px 230px, 200px 200px, auto;
+}
+
+.wrap {
+  max-width: 980px;
+  margin: auto;
+}
+
+.hero {
+  text-align: center;
+  padding: 45px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 90px;
+  height: 90px;
+  border-radius: 28px;
+  background: linear-gradient(145deg, #ffc6e6, #ff9fcf);
+  display: grid;
+  place-items: center;
+  font-size: 45px;
+  box-shadow: 0 10px 30px #ff6fae55;
+}
+
+h1 {
+  margin: 0;
+  font-family: 'Fredoka', sans-serif;
+  font-size: clamp(3rem, 10vw, 6rem);
+  background: linear-gradient(180deg, white, var(--pink), var(--rose));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.tagline {
+  color: var(--lilac);
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  background: var(--violet);
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  background: var(--rose);
+  transform: translateY(-3px);
+}
+
+section {
+  margin: 25px 0;
+}
+
+.panel {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 25px;
+  padding: 28px;
+  margin: 25px 0;
+  backdrop-filter: blur(6px);
+}
+
+h2, h3 {
+  font-family: 'Fredoka', sans-serif;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.eyebrow {
+  color: var(--pink);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+}
+
+.who {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  align-items: center;
+}
+
+.photo-img {
+  width: 100%;
+  border-radius: 20px;
+  border: 3px solid var(--line);
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.fact {
+  background: rgba(90, 63, 208, 0.4);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 18px;
+}
+
+.fact span {
+  display: block;
+  color: var(--lilac);
+  font-size: 0.8rem;
+}
+
+.fact b {
+  display: block;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.2rem;
+}
+
+.likes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.like {
+  background: rgba(90, 63, 208, 0.35);
+  border: 1px solid var(--line);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.like h3 {
+  color: var(--pink);
+}
+
+.donate {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 25px;
+  padding: 30px;
+  text-align: center;
+}
+
+.sub {
+  color: var(--lilac);
+}
+
+label {
+  display: block;
+  text-align: left;
+  margin-top: 18px;
+  font-weight: 800;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 14px;
+  margin-top: 8px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: rgba(10, 12, 44, 0.8);
+  color: white;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+button, .cta {
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 13px 25px;
+  border-radius: 30px;
+  background: var(--pink);
+  color: #2a1d6e;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+button:hover, .cta:hover {
+  background: var(--rose);
+  color: white;
+  transform: translateY(-3px);
+}
+
+.error {
+  color: #ff9fb4;
+}
+
+footer {
+  text-align: center;
+  padding: 35px 10px;
+  color: var(--lilac);
+}
+
+@media (max-width: 650px) {
+  .who {
+    grid-template-columns: 1fr;
+  }
+
+  .facts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .likes {
+    grid-template-columns: 1fr;
+  }
+}
